@@ -4,6 +4,7 @@ Date: 2022-01-31
 Title: Compare TAF and icesTAF
 Authors@R: c(person("Arni", "Magnusson", role=c("aut","cre"), email="thisisarni@gmail.com"),
              person("Colin", "Millar", role="aut"))
+Imports: icesTAF, TAF
 Description: Development tool to show the exact differences between TAF and icesTAF.
 License: GPL-3
 URL: https://taf.ices.dk

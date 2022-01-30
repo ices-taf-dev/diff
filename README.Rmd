@@ -2,13 +2,20 @@
 title: Comparison of TAF and icesTAF
 output:
   pdf_document:
+    toc: true
     number_sections: true
 ---
+
+---
+
+**Preamble**\
 
 ```{r}
 library(diff)
 tools.prod <- "~/git/ices/tools-prod"
 ```
+
+\newpage
 
 # Files
 
@@ -45,3 +52,28 @@ Check out these entries:
     * `S3method(roxy_tag_parse,roxy_tag_tafSource)`
     * `S3method(roxy_tag_parse,roxy_tag_tafYear)`
 5. `export(upload.fay)`
+
+\newpage
+
+# Environment
+
+```{r}
+compare.environment()
+```
+
+Check out these objects:
+
+1. `draft.data.script`
+
+2. `taf.roxygenise`
+   * `list2bibtex`
+   * `loadpkg`
+   * `roclet_output.roclet_taf`
+   * `roclet_process.roclet_taf`
+   * `roxy_tag_parse.roxy_tag_tafAccess`
+   * `roxy_tag_parse.roxy_tag_tafKey`
+   * `roxy_tag_parse.roxy_tag_tafOriginator`
+   * `roxy_tag_parse.roxy_tag_tafPeriod`
+   * `roxy_tag_parse.roxy_tag_tafSource`
+   * `roxy_tag_parse.roxy_tag_tafYear`
+   * `taf_roclet`
