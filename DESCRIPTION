@@ -1,0 +1,12 @@
+Package: diff
+Version: 1.0.0
+Date: 2022-01-31
+Title: Compare TAF and icesTAF
+Authors@R: c(person("Arni", "Magnusson", role=c("aut","cre"), email="thisisarni@gmail.com"),
+             person("Colin", "Millar", role="aut"))
+Description: Development tool to show the exact differences between TAF and icesTAF.
+License: GPL-3
+URL: https://taf.ices.dk
+Encoding: UTF-8
+RoxygenNote: 7.1.2
+Roxygen: list(old_usage=TRUE)

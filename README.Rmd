@@ -1,0 +1,47 @@
+---
+title: Comparison of TAF and icesTAF
+output:
+  pdf_document:
+    number_sections: true
+---
+
+```{r}
+library(diff)
+tools.prod <- "~/git/ices/tools-prod"
+```
+
+# Files
+
+```{r}
+compare.files(tools.prod)
+```
+
+Check out these files:
+
+1. `draft.data.script.R`
+2. `get.stockassessment.results.R`
+3. `get.stockassessments.R`
+4. `taf.roxygenise.R`
+5. `upload.fay.R`
+
+\newpage
+
+# Namespace
+
+```{r}
+compare.namespace(tools.prod)
+```
+
+Check out these entries:
+
+1. `export(draft.data.script)`
+2. `export(get.stockassessment.results)`
+3. `export(get.stockassessments)`
+4. `export(taf.roxygenise)`
+    * `S3method(roxy_tag_parse,roxy_tag_tafAccess)`
+    * `S3method(roxy_tag_parse,roxy_tag_tafKey)`
+    * `S3method(roxy_tag_parse,roxy_tag_tafOriginator)`
+    * `S3method(roxy_tag_parse,roxy_tag_tafPeriod)`
+    * `S3method(roxy_tag_parse,roxy_tag_tafSource)`
+    * `S3method(roxy_tag_parse,roxy_tag_tafYear)`
+5. `export(upload.fay)`
