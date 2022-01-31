@@ -18,7 +18,7 @@ Compare files in the R directory of \pkg{TAF} and \pkg{icesTAF} repositories.
 \examples{
 \dontrun{
 tools.prod <- "~/git/ices/tools-prod"
-compares.files(tools.prod)
+compare.rdir(tools.prod)
 }
 
 }

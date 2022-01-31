@@ -9,7 +9,7 @@
 #' @examples
 #' \dontrun{
 #' tools.prod <- "~/git/ices/tools-prod"
-#' compares.files(tools.prod)
+#' compare.rdir(tools.prod)
 #' }
 #'
 #' @export
