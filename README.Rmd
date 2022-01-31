@@ -17,10 +17,10 @@ tools.prod <- "~/git/ices/tools-prod"
 
 \newpage
 
-# Files
+# R directory
 
 ```{r}
-compare.files(tools.prod)
+compare.rdir(tools.prod)
 ```
 
 Check out these files:
