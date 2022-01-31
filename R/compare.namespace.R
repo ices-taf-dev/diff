@@ -1,11 +1,17 @@
 #' Compare Namespace
 #'
-#' Compare NAMESPACE in \pkg{TAF} and \pkg{icesTAF}.
+#' Compare \code{NAMESPACE} file in \pkg{TAF} and \pkg{icesTAF} repositories.
 #'
 #' @param tools.prod location of \code{TAF} and \code{icesTAF} repositories.
 #'
 #' @return
-#' List of namespace entries that are different between the repositories.
+#' List of \code{NAMESPACE} entries that are different between the repositories.
+#'
+#' @examples
+#' \dontrun{
+#' tools.prod <- "~/git/ices/tools-prod"
+#' compare.namespace(tools.prod)
+#' }
 #'
 #' @export
 

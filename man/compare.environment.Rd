@@ -7,8 +7,13 @@
 compare.environment()
 }
 \value{
-List of environment entries that are different between the packages.
+List of objects that are different between the environments.
 }
 \description{
-Compare environments in \pkg{TAF} and \pkg{icesTAF}.
+Compare objects in the environments \code{package:TAF} and
+\code{package:icesTAF} in an R session.
+}
+\examples{
+compare.environment()
+
 }

@@ -10,8 +10,15 @@ compare.namespace(tools.prod = "~/git/ices/tools-prod")
 \item{tools.prod}{location of \code{TAF} and \code{icesTAF} repositories.}
 }
 \value{
-List of namespace entries that are different between the repositories.
+List of \code{NAMESPACE} entries that are different between the repositories.
 }
 \description{
-Compare NAMESPACE in \pkg{TAF} and \pkg{icesTAF}.
+Compare \code{NAMESPACE} file in \pkg{TAF} and \pkg{icesTAF} repositories.
+}
+\examples{
+\dontrun{
+tools.prod <- "~/git/ices/tools-prod"
+compare.namespace(tools.prod)
+}
+
 }
