@@ -70,3 +70,164 @@ Check out these objects:
    * `roxy_tag_parse.roxy_tag_tafSource`
    * `roxy_tag_parse.roxy_tag_tafYear`
    * `taf_roclet`
+
+\newpage
+
+# R files
+
+```{r}
+files <- intersect(dir(file.path(tools.prod, "TAF/R")),
+                   dir(file.path(tools.prod, "icesTAF/R")))
+diffs <- sapply(files, diff_file, tools.prod=tools.prod)
+diffs <- diffs[!sapply(diffs, is.null)]
+names(diffs)
+```
+
+Based on the `diff_file` output, 21 R files are different.
+
+Let's look at each R file that is different. In many cases, the difference is
+trivial, often from development responding to CRAN feedback when we submitted
+the TAF package, so we can keep the TAF version. In other cases, where
+discussion and/or action is needed, the $\Rightarrow$ sign is used and the
+difference is highlighted and discussed in the next section.
+
+\newpage
+
+```{r}
+diffs[1]
+```
+(Trivial)\newpage
+
+```{r}
+diffs[2]
+```
+(Trivial)\newpage
+
+```{r}
+diffs[3]
+```
+(Trivial)\newpage
+
+```{r}
+diffs[4]
+```
+(Trivial)\newpage
+
+```{r}
+diffs[5]
+```
+(Trivial)\newpage
+
+```{r}
+diffs[6]
+```
+(Trivial)\newpage
+
+```{r}
+diffs[7]
+```
+(Trivial)\newpage
+
+```{r}
+diffs[8]
+```
+(Trivial)\newpage
+
+```{r}
+diffs[9]
+```
+(Trivial)\newpage
+
+```{r}
+diffs[10]
+```
+(Trivial)\newpage
+
+```{r}
+diffs[11]
+```
+(Trivial)\newpage
+
+```{r}
+diffs[12]
+```
+(Trivial)\newpage
+
+```{r}
+diffs[13]
+```
+(Trivial)\newpage
+
+```{r}
+diffs[14]
+```
+
+$\Rightarrow$ This rewrite of `read.bib` (22 Mar 2021, Colin) removed the
+dependency on the **jsonlite** package.
+
+The **icesTAF** package has the old `read.bib` (28 Oct 2020, Colin) version that
+depends on **jsonlite**. Implementing **icesTAF** as a layer on top of **TAF**,
+this version will disappear.
+
+\newpage
+
+```{r}
+diffs[15]
+```
+(Trivial)\newpage
+
+```{r}
+diffs[16]
+```
+(Trivial)\newpage
+
+```{r}
+diffs[17]
+```
+(Trivial)\newpage
+
+```{r}
+diffs[18]
+```
+(Trivial)\newpage
+
+```{r}
+diffs[19]
+```
+(Trivial)\newpage
+
+```{r}
+diffs[20]
+```
+(Trivial)\newpage
+
+```{r}
+diffs[21]
+```
+(Trivial)\newpage
+
+# Discussion and actions
+
+```{r}
+diffs[14]
+```
+
+$\Rightarrow$ This rewrite of `read.bib` (22 Mar 2021, Colin) removed the
+dependency on the **jsonlite** package.
+
+The **icesTAF** package has the old `read.bib` (28 Oct 2020, Colin) version that
+depends on **jsonlite**. Implementing **icesTAF** as a layer on top of **TAF**,
+this version will disappear.
+
+\newpage
+
+# Conclusions
+
+Implemented as a layer on top of **TAF**, the **icesTAF** package only includes
+two user-level functions:
+
+- `draft.data.script()`
+- `taf.roxygenise()`
+
+These are conveniently provided in two files: `draft.data.script.R` and
+`taf.roxygenise.R`.
