@@ -5,6 +5,10 @@
 #'
 #' @param file name of a \file{*.R} file, without the full path.
 #' @param tools.prod location of \code{TAF} and \code{icesTAF} repositories.
+#' @param ignore.internal whether to ignore lines containing the string
+#'        \code{"TAF-internal"}.
+#' @param ignore.noreturn whether to ignore lines containing the string
+#'        \code{"No return value"}.
 #' @param ignore.overview whether to ignore lines containing the string
 #'        \code{"gives an overview of the package"}.
 #' @param simplify whether to omit empty string vectors in the output.
@@ -22,10 +26,23 @@
 #' @export
 
 diff_file <- function(file, tools.prod="~/git/ices/tools-prod",
+                      ignore.internal=TRUE, ignore.noreturn=TRUE,
                       ignore.overview=TRUE, simplify=TRUE)
 {
   TAF <- readLines(file.path(tools.prod, "TAF/R", file))
   icesTAF <- readLines(file.path(tools.prod, "icesTAF/R", file))
+  if(ignore.internal)
+  {
+    omit <- "TAF-internal"
+    TAF <- grep(omit, TAF, invert=TRUE, value=TRUE)
+    icesTAF <- grep(omit, icesTAF, invert=TRUE, value=TRUE)
+  }
+  if(ignore.noreturn)
+  {
+    omit <- "No return value"
+    TAF <- grep(omit, TAF, invert=TRUE, value=TRUE)
+    icesTAF <- grep(omit, icesTAF, invert=TRUE, value=TRUE)
+  }
   if(ignore.overview)
   {
     omit <- "gives an overview of the package"

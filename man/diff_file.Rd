@@ -5,12 +5,19 @@
 \title{Compare R File}
 \usage{
 diff_file(file, tools.prod = "~/git/ices/tools-prod",
-  ignore.overview = TRUE, simplify = TRUE)
+  ignore.internal = TRUE, ignore.noreturn = TRUE, ignore.overview = TRUE,
+  simplify = TRUE)
 }
 \arguments{
 \item{file}{name of a \file{*.R} file, without the full path.}
 
 \item{tools.prod}{location of \code{TAF} and \code{icesTAF} repositories.}
+
+\item{ignore.internal}{whether to ignore lines containing the string
+\code{"TAF-internal"}.}
+
+\item{ignore.noreturn}{whether to ignore lines containing the string
+\code{"No return value"}.}
 
 \item{ignore.overview}{whether to ignore lines containing the string
 \code{"gives an overview of the package"}.}
