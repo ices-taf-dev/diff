@@ -1,6 +1,7 @@
 #' Compare Namespace
 #'
-#' Compare \code{NAMESPACE} file in \pkg{TAF} and \pkg{icesTAF} repositories.
+#' Compare entries in the \code{NAMESPACE} file of \pkg{TAF} and \pkg{icesTAF}
+#' repositories.
 #'
 #' @param tools.prod location of \code{TAF} and \code{icesTAF} repositories.
 #'
@@ -10,12 +11,12 @@
 #' @examples
 #' \dontrun{
 #' tools.prod <- "~/git/ices/tools-prod"
-#' compare.namespace(tools.prod)
+#' diff_namespace(tools.prod)
 #' }
 #'
 #' @export
 
-compare.namespace <- function(tools.prod="~/git/ices/tools-prod")
+diff_namespace <- function(tools.prod="~/git/ices/tools-prod")
 {
   TAF <- readLines(file.path(tools.prod, "TAF/NAMESPACE"))
   icesTAF <- readLines(file.path(tools.prod, "icesTAF/NAMESPACE"))

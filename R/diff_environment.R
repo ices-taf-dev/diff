@@ -6,11 +6,11 @@
 #' @return List of objects that are different between the environments.
 #'
 #' @examples
-#' compare.environment()
+#' diff_environment()
 #'
 #' @export
 
-compare.environment <- function()
+diff_environment <- function()
 {
   icesTAF <- ls(getNamespace("icesTAF"))
   TAF <- ls(getNamespace("TAF"))

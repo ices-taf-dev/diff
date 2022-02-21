@@ -1,6 +1,7 @@
-#' Compare R Directory
+#' Compare Directory
 #'
-#' Compare files in the R directory of \pkg{TAF} and \pkg{icesTAF} repositories.
+#' Compare filenames in the R directory of \pkg{TAF} and \pkg{icesTAF}
+#' repositories.
 #'
 #' @param tools.prod location of \code{TAF} and \code{icesTAF} repositories.
 #'
@@ -9,12 +10,12 @@
 #' @examples
 #' \dontrun{
 #' tools.prod <- "~/git/ices/tools-prod"
-#' compare.rdir(tools.prod)
+#' diff_dir(tools.prod)
 #' }
 #'
 #' @export
 
-compare.rdir <- function(tools.prod="~/git/ices/tools-prod")
+diff_dir <- function(tools.prod="~/git/ices/tools-prod")
 {
   TAF <- dir(file.path(tools.prod, "TAF/R"))
   icesTAF <- dir(file.path(tools.prod, "icesTAF/R"))
