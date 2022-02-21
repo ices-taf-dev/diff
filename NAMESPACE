@@ -2,4 +2,5 @@
 
 export(diff_dir)
 export(diff_environment)
+export(diff_file)
 export(diff_namespace)
