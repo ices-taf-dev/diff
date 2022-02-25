@@ -167,7 +167,7 @@ dependency on the **jsonlite** package.
 
 The **icesTAF** package has the old `read.bib` (28 Oct 2020, Colin) version that
 depends on **jsonlite**. Implementing **icesTAF** as a layer on top of **TAF**,
-this version will disappear.
+the old version will disappear and all is well.
 
 \newpage
 
@@ -217,7 +217,7 @@ dependency on the **jsonlite** package.
 
 The **icesTAF** package has the old `read.bib` (28 Oct 2020, Colin) version that
 depends on **jsonlite**. Implementing **icesTAF** as a layer on top of **TAF**,
-this version will disappear.
+the old version will disappear and all is well.
 
 \newpage
 
